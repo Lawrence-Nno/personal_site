@@ -1,0 +1,116 @@
+body{
+    background-color: #D8D9DA;
+}
+h3{
+    display: inline;
+}
+hr{
+    width: 6%;
+    margin: auto;
+    border: 3px solid #000000;
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+.cover-image{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.container-image{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.sections{
+    text-align: center;
+    margin-top: 1rem;
+}
+.card-bg{
+    background-color: #D8D9DA;
+    color: #61677A;
+}
+.about-image {
+    width: 20%;
+    display: inline;
+}
+.about-image img{
+    width: 20%;
+    height: 10rem;
+    object-fit: cover;
+    display: inline;
+    float: left;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+.card-margin{
+    margin-bottom: 2rem;
+}
+.card-margin:hover{
+    opacity: 50%;
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(10%);
+  }
+}
+.p_folio_image_holder{
+    text-align: center;
+}
+.p_folio_image_holder img{
+    width: 60%;
+    height: 52vh;
+    object-fit: fit;
+}
+.p_folio_text{
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+.p_folio_link{
+    margin-left: 45%;
+}
+.p_folio_body{
+    background-color: #272829;
+}
+.p_folio_h2{
+    color: #D8D9DA;
+}
+.p_folio_title{
+    color: #272829;
+}
+.p_folio_card{
+    background-color: #D8D9DA;
+}
+.form-style{
+    margin-bottom: 1rem;
+}
+.card-contact{
+margin-bottom: 2rem;
+width: 21rem;
+}
+
+.footer{
+background-color: black;
+height: 4rem;
+color: white;
+margin-top: 2rem;
+}
+.footer-text{
+    padding: 0.7rem;
+}
+.footer-text p{
+    font-size: 1.1rem;
+}
