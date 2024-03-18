@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
@@ -8,14 +10,14 @@ from datetime import date
 
 
 app = Flask(__name__)
-app.secret_key = "c224rf"
-portfolio_url = "https://api.npoint.io/f2a8320c085e54c0bc83"
+app.secret_key = os.environ["SECRET_KEY"]
+portfolio_url = os.environ["URL"]
 year = date.today().strftime("%Y")
 
-app.config['MAIL_SERVER'] = 'smtp.mail.yahoo.com'
+app.config['MAIL_SERVER'] = os.environ["MAIL_SERVER"]
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'classiccream@yahoo.com'
-app.config['MAIL_PASSWORD'] = 'prvvnlftpzsckshu'
+app.config['MAIL_USERNAME'] = os.environ["EMAIL"]
+app.config['MAIL_PASSWORD'] = os.environ["PWD"]
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -23,7 +25,7 @@ mail = Mail(app)
 
 
 class MyForm(FlaskForm):
-    email = StringField(label='Your Email', validators=[Email(), DataRequired()], render_kw={"class": 'form-control form-style', "placeholder": "Name"})
+    email = StringField(label='Your Email', validators=[Email(), DataRequired()], render_kw={"class": 'form-control form-style', "placeholder": "Your Email"})
     name = StringField(label='Your Name', validators=[DataRequired()], render_kw={"class": 'form-control form-style', "placeholder": "Your Name"})
     subject = StringField(label='Subject', validators=[DataRequired()], render_kw={"class": 'form-control form-style', "placeholder": "Subject"})
     body = TextAreaField(label='Your Message', render_kw={"class": 'form-control form-style', "placeholder": "Type your message here", "s": "50"})
@@ -41,10 +43,11 @@ def index():
     if form.validate_on_submit():
         name = form.name.data
         email = form.email.data
+        subject = form.subject.data
         print(f"Name is {name}")
-        print(f"Email is {form.email.data}")
+        print(f"Email is {email}")
         print(f"The message is {form.body.data}")
-        msg = Message(form.subject.data, sender='classiccream@yahoo.com', recipients=['classiccream@yahoo.com'])
+        msg = Message(form.subject.data, sender=os.environ["EMAIL"], recipients=[os.environ["EMAIL"]])
         msg.body = f"Name: {form.name.data}\n Email: {form.email.data}\n content: {form.body.data}"
         mail.send(msg)
         print("Message sent")

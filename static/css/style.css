@@ -1,5 +1,6 @@
 body{
     background-color: #D8D9DA;
+    background-colour: #000000;
 }
 h3{
     display: inline;
@@ -15,6 +16,7 @@ hr{
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    opacity: 1;
 }
 .container-image{
     position: relative;
