@@ -1,6 +1,7 @@
 body{
-    background-color: #D8D9DA;
-    background-colour: #000000;
+    background-colour: #D8D9DA;
+    background-color: #000000;
+    color: #DFF5FF;
 }
 h3{
     display: inline;
@@ -8,7 +9,7 @@ h3{
 hr{
     width: 6%;
     margin: auto;
-    border: 3px solid #000000;
+    border: 3px solid #76ABAE;
     opacity: 1;
     margin-bottom: 1rem;
 }
@@ -16,7 +17,7 @@ hr{
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    opacity: 1;
+    opacity: 0.4;
 }
 .container-image{
     position: relative;
@@ -32,6 +33,9 @@ hr{
 .sections{
     text-align: center;
     margin-top: 1rem;
+}
+.contact{
+    color: #000000;
 }
 .card-bg{
     background-color: #D8D9DA;
@@ -54,7 +58,7 @@ hr{
     margin-bottom: 2rem;
 }
 .card-margin:hover{
-    opacity: 50%;
+    opacity: 70%;
     animation-duration: 1s;
     animation-name: slidein;
     animation-iteration-count: 2;
@@ -115,4 +119,38 @@ margin-top: 2rem;
 }
 .footer-text p{
     font-size: 1.1rem;
+}
+.about-area{
+    background-color: #76ABAE;
+    color: #000000;
+}
+.about-area hr{
+    border: 3px solid #000000;
+}
+.portfolio-area{
+    color: #76ABAE;
+}
+.portfolio-area-card{
+    background-color: #76ABAE;
+}
+.portfolio-title{
+    font-weight: bold;
+}
+.contact-area{
+    background-color: #76ABAE;
+    color: #000000;
+}
+.contact-area hr{
+    border: 3px solid #000000;
+}
+.image-brand{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  font-size: 0.7rem;
 }
