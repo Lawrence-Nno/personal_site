@@ -77,28 +77,31 @@ hr{
     text-align: center;
 }
 .p_folio_image_holder img{
-    width: 60%;
-    height: 52vh;
-    object-fit: fit;
+    width: 80%;
+    height: 62vh;
+    object-fit: cover;
 }
 .p_folio_text{
     font-size: 1.3rem;
     margin-top: 0;
+    color: #000000;
 }
 .p_folio_link{
     margin-left: 45%;
 }
 .p_folio_body{
-    background-color: #272829;
+    background-color: #76ABAE;
 }
 .p_folio_h2{
-    color: #D8D9DA;
+    color: #000000;
+    margin: 1rem;
+    font-size: 2.5rem;
 }
 .p_folio_title{
-    color: #272829;
+    color: #76ABAE;
 }
 .p_folio_card{
-    background-color: #D8D9DA;
+    background-color: #FFFFFF;
 }
 .form-style{
     margin-bottom: 1rem;
