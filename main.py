@@ -47,7 +47,7 @@ def index():
         print(f"Name is {name}")
         print(f"Email is {email}")
         print(f"The message is {form.body.data}")
-        msg = Message(form.subject.data, sender=os.environ["EMAIL"], recipients=[os.environ["EMAIL"]])
+        msg = Message(form.subject.data, sender=os.environ["EMAIL"], recipients=["lawrence.nno@gmail.com"])
         msg.body = f"Name: {form.name.data}\n Email: {form.email.data}\n content: {form.body.data}"
         mail.send(msg)
         print("Message sent")

@@ -1,3 +1,12 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.murecho-googlefont {
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 body{
     background-colour: #D8D9DA;
     background-color: #000000;
@@ -12,6 +21,12 @@ hr{
     border: 3px solid #76ABAE;
     opacity: 1;
     margin-bottom: 1rem;
+}
+.lawrence h1, h3{
+  font-family: "Murecho", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .cover-image{
     width: 100%;
@@ -32,10 +47,22 @@ hr{
 }
 .sections{
     text-align: center;
-    margin-top: 1rem;
+    padding-top: 1rem;
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
 }
 .contact{
     color: #000000;
+    text-align: center;
+    padding-top: 1rem;
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
 }
 .card-bg{
     background-color: #D8D9DA;
@@ -46,13 +73,26 @@ hr{
     display: inline;
 }
 .about-image img{
-    width: 20%;
-    height: 10rem;
+    width: 40%;
+    height: 8rem;
     object-fit: cover;
     display: inline;
     float: left;
     margin-right: 1rem;
     margin-top: 0.5rem;
+}
+.about-segments{
+    border-style: solid;
+    border-width: 1px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.about-segments-edu{
+    border-style: solid;
+    border-width: 1px;
+    padding: 2rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .card-margin{
     margin-bottom: 2rem;
@@ -82,9 +122,15 @@ hr{
     object-fit: cover;
 }
 .p_folio_text{
-    font-size: 1.3rem;
-    margin-top: 0;
+
     color: #000000;
+    text-align: center;
+    padding: 1rem 4rem;
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
 }
 .p_folio_link{
     margin-left: 45%;
@@ -94,11 +140,21 @@ hr{
 }
 .p_folio_h2{
     color: #000000;
-    margin: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5rem;
 }
 .p_folio_title{
     color: #76ABAE;
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
 }
 .p_folio_card{
     background-color: #FFFFFF;
@@ -135,6 +191,85 @@ margin-top: 2rem;
 }
 .portfolio-area-card{
     background-color: #76ABAE;
+}
+.proficiency-area{
+    background-color: #EEEEEE;
+    color: #000000;
+}
+.proficiency-area hr{
+    border: 3px solid #000000;
+}
+.proficiency-area-card{
+    background-color: #76ABAE;
+    margin-bottom: 1rem;
+    border = None;
+}
+.proficiency-slide{
+    position: relative;
+}
+.proficiency-slide.active{
+    animation-duration: 1s;
+    animation-name: profiSlide;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes profiSlide {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(5%);
+  }
+}
+.proficiency-card-header:first-child {
+    border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+}
+.proficiency-card-header{
+    padding:var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+.proficiency-card{
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: #EEEEEE;
+    background-clip: border-box;
+    border-radius: var(--bs-card-border-radius);
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
 }
 .portfolio-title{
     font-weight: bold;
