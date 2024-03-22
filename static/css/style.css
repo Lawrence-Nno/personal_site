@@ -74,7 +74,7 @@ hr{
 }
 .about-image img{
     width: 40%;
-    height: 8rem;
+    height: 7rem;
     object-fit: cover;
     display: inline;
     float: left;
@@ -84,13 +84,21 @@ hr{
 .about-segments{
     border-style: solid;
     border-width: 1px;
-    padding: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
     margin-bottom: 1rem;
 }
 .about-segments-edu{
     border-style: solid;
     border-width: 1px;
-    padding: 2rem;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.about-segments-con{
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -114,26 +122,32 @@ hr{
   }
 }
 .p_folio_image_holder{
-    text-align: center;
+    margin: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    height: 15rem;
+    #overflow: hidden;
 }
 .p_folio_image_holder img{
-    width: 80%;
-    height: 62vh;
-    object-fit: cover;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+.p_folio_details{
+    margin: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 1rem;
 }
 .p_folio_text{
-
     color: #000000;
-    text-align: center;
-    padding: 1rem 4rem;
     font-family: "Murecho", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1rem;
-}
-.p_folio_link{
-    margin-left: 45%;
 }
 .p_folio_body{
     background-color: #76ABAE;
@@ -141,23 +155,31 @@ hr{
 .p_folio_h2{
     color: #000000;
     text-align: center;
-    padding: 1.5rem;
+    margin-top: 1rem;
     font-family: "Murecho", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 2.5rem;
 }
+.p_folio_hr{
+    border-color: #000000;
+}
 .p_folio_title{
-    color: #76ABAE;
+    color: #000000;
     font-family: "Murecho", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 100;
     font-style: normal;
     font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
-.p_folio_card{
-    background-color: #FFFFFF;
+.p_folio_button{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    text-decoration: None;
 }
 .form-style{
     margin-bottom: 1rem;

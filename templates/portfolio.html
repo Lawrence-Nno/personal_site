@@ -13,7 +13,7 @@
     <div class="container-fluid">
       <a class="navbar-brand image-brand" href="#home">
 <!--          <div class="image-brand">-->
-            <img src="{{ url_for('static', filename='image/brand.png') }}">
+            <img src="{{ url_for('static', filename='image/brand.jpg') }}">
             <div class="bottom-left">LAWRENCE NNO</div>
 <!--          </div>-->
       </a>
@@ -41,19 +41,21 @@
   <div class="container-fluid">
     <div class="container">
       <h2 class="text-center p_folio_h2">Portfolio Details</h2>
-<!--      <hr>-->
-        <div class="card p_folio_card">
-          <div class="card-header">
-            <h5 class="card-title text-center p_folio_title">{{ p_folio.title }}</h5>
-          </div>
-          <div class="p_folio_image_holder">
-            <a href="{{ p_folio.project_link }}" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename=p_folio.image_url) }}" class="card-img-top text-center" alt="Portfolio Image"></a>
-          </div>
-          <div class="card-body">
-            <p class="card-text p_folio_text text-center">{{ p_folio.body | safe }}</p>
-<!--            <a href="#" class="btn btn-primary p_folio_link">Youtube demo</a>-->
+      <hr class="p_folio_hr">
+      <div class="row">
+        <h5 class="text-center p_folio_title">{{ p_folio.title }}</h5>
+        <div class="col">
+          <div class="p_folio_image_holder mx-auto"  style="width: 23rem;">
+            <a href="{{ p_folio.project_link }}" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename=p_folio.image_url) }}" alt="Portfolio Image"></a>
           </div>
         </div>
+        <div class="col">
+          <div class="p_folio_details mx-auto" style="width: 23rem;">
+            <p class="p_folio_text">{{ p_folio.body | safe }}</p>
+            <a href="{{ p_folio.project_link }}" target="_blank" rel="noopener noreferrer" class="p_folio_button">Video demo</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
