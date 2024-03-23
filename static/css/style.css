@@ -1,14 +1,4 @@
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.murecho-googlefont {
-  font-family: "Murecho", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 body{
-    background-colour: #D8D9DA;
     background-color: #000000;
     color: #DFF5FF;
 }
@@ -85,8 +75,9 @@ hr{
     border-style: solid;
     border-width: 1px;
     padding: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3.5rem;
     margin-bottom: 1rem;
+    width: 22rem;
 }
 .about-segments-edu{
     border-style: solid;
@@ -94,6 +85,7 @@ hr{
     padding: 1rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    width: 22rem;
 }
 .about-segments-con{
     border-style: solid;
@@ -101,6 +93,7 @@ hr{
     padding: 1rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    width: 22rem;
 }
 .card-margin{
     margin-bottom: 2rem;
@@ -213,6 +206,7 @@ margin-top: 2rem;
 }
 .portfolio-area-card{
     background-color: #76ABAE;
+    width: 22rem;
 }
 .proficiency-area{
     background-color: #EEEEEE;
@@ -225,6 +219,7 @@ margin-top: 2rem;
     background-color: #76ABAE;
     margin-bottom: 1rem;
     border = None;
+    width: 22rem;
 }
 .proficiency-slide{
     position: relative;
@@ -310,7 +305,51 @@ margin-top: 2rem;
 }
 .bottom-left {
   position: absolute;
-  top: 80%;
-  left: 10%;
+  top: 60%;
+  left: 3%;
   font-size: 0.7rem;
+}
+@media only screen and (max-width: 399px) {
+    .about-segments{
+        width: 18rem;
+    }
+    .about-segments-edu{
+        width: 18rem;
+    }
+    .about-segments-con{
+        width: 18rem;
+    }
+    .proficiency-area-card{
+        width: 18rem;
+    }
+    .portfolio-area-card{
+        width: 18rem;
+    }
+    .card-contact{
+        width: 16rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .about-segments{
+        width: 12rem;
+    }
+    .about-segments-edu{
+        width: 12rem;
+    }
+    .about-segments-con{
+        width: 12rem;
+    }
+    .proficiency-area-card{
+        width: 12rem;
+    }
+    .portfolio-area-card{
+        width: 12rem;
+    }
+    .card-contact{
+        width: 10rem;
+    }
+    .sections{
+        font-size: 2rem;
+    }
 }
