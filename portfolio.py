@@ -1,5 +1,4 @@
 import os
-
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
@@ -10,14 +9,14 @@ from datetime import date
 
 
 app = Flask(__name__)
-app.secret_key = os.environ["SECRET_KEY"]
-portfolio_url = os.environ["URL"]
+app.secret_key = os.getenv("SECRET_KEY")
+portfolio_url = os.getenv("URL")
 year = date.today().strftime("%Y")
 
-app.config['MAIL_SERVER'] = os.environ["MAIL_SERVER"]
+app.config['MAIL_SERVER'] = os.getenv("MAIL_SERVER")
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = os.environ["EMAIL"]
-app.config['MAIL_PASSWORD'] = os.environ["PWD"]
+app.config['MAIL_USERNAME'] = os.getenv("EMAIL")
+app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PWD")
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
